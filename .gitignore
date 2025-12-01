@@ -1,2 +1,5 @@
 data/
+output/task1_output.csv
+output/task4_output.csv
+.venv/
 
