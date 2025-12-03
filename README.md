@@ -5,23 +5,22 @@ The objective of this project is to analyze a dataset of pull requests generated
 
 ## Repository Structure
 
-ai-security-pr-analysis
-│
-├── src/ # Source code for each task
+├── src/ # Source code for all tasks
 │ ├── task1.py
 │ ├── task2.py
 │ ├── task3.py
 │ ├── task4.py
 │ └── task5.py
 │
-├── output/ # Generated CSV files for each task
-│ ├── task1_output.csv
+├── output/ # Generated CSV output files
+│ ├── task1_output.csv (Git LFS pointer - too large for GitHub)
 │ ├── task2_output.csv
 │ ├── task3_output.csv
-│ ├── task4_output.csv
+│ ├── task4_output.csv (Git LFS pointer - too large for GitHub)
 │ └── task5_output.csv
 │
-├── README.md # Project documentation
+├── data/ # Parquet input files (not tracked)
+├── README.md
 └── requirements.txt # Python dependencies
 
 ## Tasks Included
