@@ -5,13 +5,7 @@ The objective of this project is to analyze a dataset of pull requests generated
 
 ## Repository Structure
 
-ai-security-pr-analysis/
-│
-├── data/ # Raw dataset CSVs downloaded from HuggingFace
-│ ├── all_pull_request.csv
-│ ├── all_repository.csv
-│ ├── pr_task_type.csv
-│ ├── pr_commit_details.csv
+ai-security-pr-analysis
 │
 ├── src/ # Source code for each task
 │ ├── task1.py
@@ -66,3 +60,21 @@ python3 src/task4.py
 python3 src/task5.py
 
 Outputs will appear in the `output/` folder.
+## Large Output Files (Task 1 & Task 4)
+
+The CSV outputs for Task 1 and Task 4 exceed GitHub’s 100MB per-file limit:
+
+- task1_output.csv ≈ 594 MB
+- task4_output.csv ≈ 1.6 GB
+
+Because GitHub cannot store files of this size, these files are tracked using 
+Git Large File Storage (Git LFS). GitHub displays LFS pointers instead of the 
+actual CSV content.
+
+The full CSVs can be regenerated locally by placing the parquet dataset files 
+into the `data/` directory and running:
+
+    python src/task1.py
+    python src/task4.py
+
+All other task outputs (Task 2, 3, 5) are included normally in the repository.
